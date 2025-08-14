@@ -4,5 +4,3 @@ export const services = [
   { icon: "/document.svg", description: "Presentamos tus declaraciones SAT" },
   { icon: "/cash.svg", description: "Cálculo, timbrado y envío de nómina" },
 ];
-// #8ace35
-// #2e4ec4

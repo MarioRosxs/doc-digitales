@@ -9,7 +9,7 @@ export default function ContactActions({ showModal }: ContactActionsProps) {
     <>
       <section className="flex justify-center">
         <p className="text-[10px] text-neutral-600 font-bold text-center md:text-[12px] sm:w-[390px]">
-          ¿Quieres cambiar a tu conta? Nosotros nos encargamos de llevar a cabo la transición de toda tu contabilidad hasta el día de hoy.
+          ¿Quieres cambiar a tu Conta? Nosotros nos encargamos de llevar a cabo la transición de toda tu contabilidad hasta el día de hoy.
         </p>
       </section>
       <section className="flex flex-col gap-2 items-center sm:flex-row md:justify-center md:gap-4 sm:mx-32">
