@@ -1,62 +1,47 @@
-"use client";
-import Service from "@/components/Service";
-import Benefit from "@/components/Benefit";
+'use client'
+import Service from "@/components/ServiceCard";
+import Benefit from "@/components/BenefitList";
+import VideoPlayer from "@/components/VideoPlayer";
+import { services } from "@/data/services";
+import { benefits } from "@/data/benefits";
+import Contact from "@/components/Contact/ContactSection";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
 
-  const services = [
-    { icon: "/globe.svg", description: "Hacemos tu contabilidad mensual" },
-    { icon: "/globe.svg", description: "Calculamos tus impuestos" },
-    { icon: "/globe.svg", description: "Presentamos tus declaraciones SAT" },
-    { icon: "/globe.svg", description: "Cálculo, timbrado y envío de nómina" },
-  ]
-  const beneficiosData = [
-    {
-      icon: "/icons/automatico.svg",
-      title: "Automático",
-      description: "Ahorra tiempo al eliminar la tarea de enviar Facturas a tu contador ¡El proceso es automático!",
-    },
-    {
-      icon: "/icons/servicio.svg",
-      title: "Servicio Oportuno",
-      description: "Comunicación más fácil y efectiva con tu contador personal.",
-    },
-    {
-      icon: "/icons/simplicidad.svg",
-      title: "Simplicidad",
-      description: "Información contable en tiempo real.",
-    },
-    {
-      icon: "/icons/confiable.svg",
-      title: "Confiable",
-      description: "Cálculos hechos por una de nuestros contadores expertos asignado especialmente a tu negocio.",
-    },
-  ];
-  return (
-    <div className="font-sans flex flex-col min-h-screen m-4 md:m-20">
-      <main className="flex flex-col gap-8 max-w-screen-xl mx-auto">
 
+  return (
+    <div className="font-sans flex flex-col min-h-screen">
+      <main className="flex flex-col gap-5 max-w-screen-xl mx-auto p-4 md:my-20 md:p-0">
+        
+        {/* Sección encabezado */}
+        <header className="flex flex-col items-center">
+          <HeroSection/>
+        </header>
+
+        {/* Sección de servicios */}
         <section className="flex flex-wrap gap-2 justify-center">
           {services.map((service, index) => (
             <Service key={index} icon={service.icon} description={service.description} />
           ))}
         </section>
 
-        <section className="flex flex-col items-center gap-5 md:flex-row">
-          <div className="relative w-64 md:w-3/5 aspect-video">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/krDWc30PAGg?si=78PCs24txbUbzcTA"
-              title="YouTube video player"
-              allowFullScreen
-            />
-          </div>
+        {/* Sección de beneficios y video informativo */}
+        <section className="flex flex-col items-center gap-5 sm:flex-row md:items-start">
+          <VideoPlayer src="https://www.youtube.com/embed/krDWc30PAGg?si=78PCs24txbUbzcTA" title="YouTube video player" />
           <div className="w-full md:w-2/5">
-            <Benefit benefits={beneficiosData} />
+            <h2 className="ml-9 font-extrabold text-[16px]">Beneficios</h2>
+            <Benefit benefits={benefits} icon="/check.svg" />
           </div>
-
         </section>
+
+        {/* Sección de contacto y modal de paquetes */}
+        <section >
+          <Contact />
+        </section>
+
       </main>
     </div>
+
   );
 }

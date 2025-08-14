@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from 'antd';
 import Image from "next/image";
 
@@ -10,16 +9,15 @@ type ServiceProps = {
 export default function Service({ icon, description }: ServiceProps) {
 
     return (
-        <Card hoverable className="shadow-lg h-[144px] w-[170px] md:h-[160px] md:w-[200px]">
+        <Card hoverable className="shadow-md shadow-gray-400 h-[144px] w-[170px] md:h-[170px] md:w-[220px]">
             <div className="flex flex-col items-center justify-between h-[96px] md:h-[120px]">
                 <Image
-                    className="dark:invert"
                     src={icon}
-                    alt="Vercel logomark"
-                    width={20}
-                    height={20}
+                    alt="Icon service"
+                    width={75}
+                    height={75}
                 />
-                <span className="text-center text-[10px] font-[600] md:text-[12px] md:px-3">{description}</span>
+                <p className="text-center text-[10px] font-[600] md:text-[12px] md:px-2">{description}</p>
             </div>
         </Card>
 
