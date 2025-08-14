@@ -8,7 +8,7 @@ export default function ContactActions({ showModal }: ContactActionsProps) {
   return (
     <>
       <section className="flex justify-center">
-        <p className="text-[10px] text-neutral-600 font-bold text-center md:text-[12px] sm:w-[390px]">
+        <p className="text-[10px] text-neutral-600 font-bold text-center md:text-[12px] sm:w-[400px]">
           ¿Quieres cambiar a tu Conta? Nosotros nos encargamos de llevar a cabo la transición de toda tu contabilidad hasta el día de hoy.
         </p>
       </section>
