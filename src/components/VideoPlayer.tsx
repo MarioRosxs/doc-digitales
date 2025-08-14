@@ -13,7 +13,7 @@ export default function VideoPlayer({ src, title }: VideoPlayerProps) {
         title={title}
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        sandbox="allow-same-origin allow-scripts allow-presentation"
+        sandbox="allow-same-origin allow-scripts"
         allowFullScreen
       />
     </div>
